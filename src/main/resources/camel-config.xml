@@ -21,18 +21,36 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:camel="http://camel.apache.org/schema/spring"
        xmlns:cxf="http://camel.apache.org/schema/cxf"
+       xmlns:camelcxf="http://camel.apache.org/schema/blueprint/cxf"
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
        http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd">
-  <!-- We still need it for loading the CXFServlet --> 
+
+
+    <camelcxf:cxfEndpoint id="solicitarPagamento"
+                          address="/secret-octo-meme/webservices/solicitarPagamento"
+                          endpointName="s:SolicitarPagamentoEndpoint"
+                          serviceName="s:SolicitarPagamentoEndpointService"
+                          wsdlURL="META-INF/wsdl/SolicitarPagamento.wsdl"
+                          serviceClass="br.sp.puc.camel.SolicitarPagamentoEndpoint"
+                          xmlns:s="http://puc.sp.br/pagamento"/>
+
+    <bean id="pagamentoRoute" class="br.sp.puc.camel.route.PagamentoRoute"/>
+
+    <camelContext id="camel" xmlns="http://br.sp.puc.camel/schema/pagamento">
+        <routeBuilder ref="pagamentoRoute"/>
+    </camelContext>
+
+  <!--
+  We still need it for loading the CXFServlet
   <import resource="classpath:META-INF/cxf/cxf.xml"/>
-  
+
   <bean id="myRoutes" class="org.apache.camel.example.cxf.CamelRoute"/>
 
   <camelContext xmlns="http://camel.apache.org/schema/spring">
     <routeBuilder ref="myRoutes"/>
   </camelContext>
-
+    -->
 </beans>
 <!-- END SNIPPET: e1 -->
