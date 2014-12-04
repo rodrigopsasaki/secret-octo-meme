@@ -16,9 +16,9 @@ public class PagamentoRoute extends RouteBuilder {
 
         from("cxf:bean:solicitarPagamento").process(new Processor() {
             public void process(Exchange exchange) throws Exception {
-                String nomeCliente = exchange.getIn().getBody(SolicitarPagamentoRequest.class).getNomeCliente();
+                String bandeiraCartao = exchange.getIn().getBody(SolicitarPagamentoRequest.class).getBandeiraCartao();
                 SolicitarPagamentoResponse output = new SolicitarPagamentoResponse();
-                output.setAprovado("Gabriel".equalsIgnoreCase(nomeCliente) ? true : false);
+                output.setAprovado(bandeiraCartao.equalsIgnoreCase("visa") ? true : false);
                 exchange.getOut().setBody(output);
             }
         }).to("log:output");

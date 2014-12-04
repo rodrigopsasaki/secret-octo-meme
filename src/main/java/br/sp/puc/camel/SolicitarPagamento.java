@@ -1,9 +1,5 @@
 package br.sp.puc.camel;
 
-import br.sp.puc.camel.ObjectFactory;
-import br.sp.puc.camel.SolicitarPagamentoRequest;
-import br.sp.puc.camel.SolicitarPagamentoResponse;
-
 import javax.annotation.Generated;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
