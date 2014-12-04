@@ -17,7 +17,7 @@ public class PagamentoRoute extends RouteBuilder {
             public void process(Exchange exchange) throws Exception {
                 String nomeCliente = exchange.getIn().getBody(SolicitarPagamentoRequest.class).getNomeCliente();
                 SolicitarPagamentoResponse output = new SolicitarPagamentoResponse();
-                output.setAprovado(nomeCliente.equalsIgnoreCase("Gabriel") ? true : false);
+                output.setAprovado("Gabriel".equalsIgnoreCase(nomeCliente) ? true : false);
                 exchange.getOut().setBody(output);
             }
         }).to("log:output");
