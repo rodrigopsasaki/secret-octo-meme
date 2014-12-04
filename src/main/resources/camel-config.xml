@@ -9,8 +9,8 @@
         http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
     <cxf:cxfEndpoint id="solicitarPagamento"
-                          address="/secret-octo-meme/webservices/solicitarPagamento"
-                          endpointName="s:SolicitarPagamento"
+                          address="/solicitarPagamento"
+                          endpointName="s:SolicitarPagamentoSOAP"
                           serviceName="s:SolicitarPagamento"
                           wsdlURL="META-INF/wsdl/SolicitarPagamento.wsdl"
                           serviceClass="br.sp.puc.camel.SolicitarPagamento"
@@ -18,7 +18,7 @@
 
     <beans:bean id="pagamentoRoute" class="br.sp.puc.camel.route.PagamentoRoute"/>
 
-    <camelContext id="camel" xmlns="http://br.sp.puc.camel/schema/pagamento">
+    <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <routeBuilder ref="pagamentoRoute"/>
     </camelContext>
 

@@ -1,10 +1,10 @@
 package br.sp.puc.camel.route;
 
+import br.sp.puc.camel.SolicitarPagamentoRequest;
+import br.sp.puc.camel.SolicitarPagamentoResponse;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
-import puc.sp.br.services.pagamento.SolicitarPagamentoRequest;
-import puc.sp.br.services.pagamento.SolicitarPagamentoResponse;
 
 /**
  * Created by gabriel on 04/12/14.
