@@ -2,7 +2,10 @@
 package br.sp.puc.camel;
 
 import javax.annotation.Generated;
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -15,8 +18,7 @@ import javax.xml.bind.annotation.*;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="codigo" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="descricao" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="aprovado" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,70 +29,31 @@ import javax.xml.bind.annotation.*;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "codigo",
-    "descricao"
+    "aprovado"
 })
 @XmlRootElement(name = "solicitarPagamentoResponse")
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:03:23-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T03:36:03-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
 public class SolicitarPagamentoResponse {
 
-    @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:03:23-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
-    protected String codigo;
-    @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:03:23-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
-    protected String descricao;
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T03:36:03-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    protected boolean aprovado;
 
     /**
-     * Gets the value of the codigo property.
+     * Gets the value of the aprovado property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:03:23-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
-    public String getCodigo() {
-        return codigo;
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T03:36:03-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    public boolean isAprovado() {
+        return aprovado;
     }
 
     /**
-     * Sets the value of the codigo property.
+     * Sets the value of the aprovado property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:03:23-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
-    public void setCodigo(String value) {
-        this.codigo = value;
-    }
-
-    /**
-     * Gets the value of the descricao property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:03:23-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
-    public String getDescricao() {
-        return descricao;
-    }
-
-    /**
-     * Sets the value of the descricao property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:03:23-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
-    public void setDescricao(String value) {
-        this.descricao = value;
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T03:36:03-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    public void setAprovado(boolean value) {
+        this.aprovado = value;
     }
 
 }

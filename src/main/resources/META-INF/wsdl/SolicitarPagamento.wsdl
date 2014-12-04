@@ -10,6 +10,7 @@
 					<xsd:sequence>
 						<xsd:element name="numeroPedido" type="xsd:string" />
 						<xsd:element name="nomeCliente" type="xsd:string" />
+						<xsd:element name="cpfCliente" type="xsd:string" />
 						<xsd:element name="valorCompra" type="xsd:double" />
 						<xsd:element name="numeroCartao" type="xsd:string" />
 						<xsd:element name="bandeiraCartao" type="xsd:string" />
@@ -20,8 +21,7 @@
 			<xsd:element name="solicitarPagamentoResponse">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="codigo" type="xsd:string" />
-                        <xsd:element name="descricao" type="xsd:string" />
+						<xsd:element name="aprovado" type="xsd:boolean" />
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>

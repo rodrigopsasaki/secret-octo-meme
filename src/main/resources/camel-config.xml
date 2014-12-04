@@ -8,8 +8,6 @@
         http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
         http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-    <import resource="classpath:META-INF/cxf/cxf.xml"/>
-
     <cxf:cxfEndpoint id="solicitarPagamento"
                           address="/solicitarPagamento"
                           endpointName="s:SolicitarPagamentoSOAP"
