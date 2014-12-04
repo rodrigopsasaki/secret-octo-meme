@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+       xmlns="http://camel.apache.org/schema/spring"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:cxf="http://camel.apache.org/schema/cxf"
        xsi:schemaLocation="
-       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
     <cxf:cxfEndpoint id="solicitarPagamento"
                           address="/secret-octo-meme/webservices/solicitarPagamento"
@@ -14,7 +16,7 @@
                           serviceClass="br.sp.puc.camel.SolicitarPagamentoEndpoint"
                           xmlns:s="http://br.sp.puc.camel/pagamento"/>
 
-    <bean id="pagamentoRoute" class="br.sp.puc.camel.route.PagamentoRoute"/>
+    <beans:bean id="pagamentoRoute" class="br.sp.puc.camel.route.PagamentoRoute"/>
 
     <camelContext id="camel" xmlns="http://br.sp.puc.camel/schema/pagamento">
         <routeBuilder ref="pagamentoRoute"/>
@@ -30,4 +32,4 @@
     <routeBuilder ref="myRoutes"/>
   </camelContext>
     -->
-</beans>
+</beans:beans>
