@@ -10,8 +10,8 @@
 
     <cxf:cxfEndpoint id="solicitarPagamento"
                           address="/secret-octo-meme/webservices/solicitarPagamento"
-                          endpointName="s:SolicitarPagamentoEndpoint"
-                          serviceName="s:SolicitarPagamentoEndpointService"
+                          endpointName="s:SolicitarPagamento"
+                          serviceName="s:SolicitarPagamento"
                           wsdlURL="META-INF/wsdl/SolicitarPagamento.wsdl"
                           serviceClass="br.sp.puc.camel.SolicitarPagamento"
                           xmlns:s="http://br.sp.puc.camel/pagamento"/>
