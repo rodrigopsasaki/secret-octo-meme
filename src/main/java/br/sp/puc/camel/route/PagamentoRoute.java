@@ -13,6 +13,7 @@ public class PagamentoRoute extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
+
         from("cxf:bean:solicitarPagamento").process(new Processor() {
             public void process(Exchange exchange) throws Exception {
                 String nomeCliente = exchange.getIn().getBody(SolicitarPagamentoRequest.class).getNomeCliente();

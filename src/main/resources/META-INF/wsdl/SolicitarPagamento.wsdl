@@ -4,7 +4,7 @@
 				  xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SolicitarPagamento"
 				  targetNamespace="http://br.sp.puc/services/pagamento">
 	<wsdl:types>
-		<xsd:schema targetNamespace="http://br.sp.puc/services/pagamento">
+		<xsd:schema targetNamespace="http://br.sp.puc/services/pagamento" elementFormDefault="qualified">
 			<xsd:element name="solicitarPagamentoRequest">
 				<xsd:complexType>
 					<xsd:sequence>
