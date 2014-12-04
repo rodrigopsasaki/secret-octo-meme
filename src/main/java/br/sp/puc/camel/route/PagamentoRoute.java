@@ -20,22 +20,19 @@ public class PagamentoRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
 
-        from("cxf:bean:solicitarPagamento").process(new Processor() {
-            public void process(Exchange exchange) throws Exception {
-                String bandeiraCartao = exchange.getIn().getBody(SolicitarPagamentoRequest.class).getBandeiraCartao();
-                SolicitarPagamentoResponse output = new SolicitarPagamentoResponse();
-                output.setAprovado(VISA.equalsIgnoreCase(bandeiraCartao) ? true : false);
-                exchange.getOut().setBody(output);
-            }
-        }).to("log:output");
+//        from("cxf:bean:solicitarPagamento").process(new Processor() {
+//            public void process(Exchange exchange) throws Exception {
+//                String bandeiraCartao = exchange.getIn().getBody(SolicitarPagamentoRequest.class).getBandeiraCartao();
+//                SolicitarPagamentoResponse output = new SolicitarPagamentoResponse();
+//                output.setAprovado(VISA.equalsIgnoreCase(bandeiraCartao) ? true : false);
+//                exchange.getOut().setBody(output);
+//            }
+//        }).to("log:output");
 
         from("cxf:bean:solicitarPagamento").choice()
                 .when(new VisaPredicate())
                     .to("direct:http://env-7034838.jelasticlw.com.br/GatewayPagamentoVisa/services/SolicitarPagamento")
                     .process(new VisaProcessor())
-                .when(new MasterCardPredicate())
-                    .to("")
-                    .process(new MasterCardProcessor())
                 .otherwise().endChoice();
     }
 }
