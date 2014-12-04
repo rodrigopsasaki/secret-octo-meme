@@ -31,3 +31,6 @@ proguard/
 *.iws
 .idea/
 idea/
+
+# Eclipse project files
+.settings/
