@@ -13,6 +13,6 @@ public class VisaPredicate implements Predicate {
     public boolean matches(Exchange exchange) {
         String bandeiraCartao = exchange.getIn().getBody(SolicitarPagamentoRequest.class).getBandeiraCartao();
 
-        return "visa".equalsIgnoreCase(bandeiraCartao) ? true : false;
+        return "visa".equalsIgnoreCase(bandeiraCartao);
     }
 }

@@ -1,5 +1,6 @@
 package br.sp.puc.camel.predicate;
 
+import br.sp.puc.camel.model.SolicitarPagamentoRequest;
 import org.apache.camel.Exchange;
 import org.apache.camel.Predicate;
 
@@ -10,6 +11,8 @@ public class MasterCardPredicate implements Predicate {
 
     @Override
     public boolean matches(Exchange exchange) {
-        return false;
+        String bandeiraCartao = exchange.getIn().getBody(SolicitarPagamentoRequest.class).getBandeiraCartao();
+
+        return "master".equalsIgnoreCase(bandeiraCartao) || "mastercard".equalsIgnoreCase(bandeiraCartao);
     }
 }

@@ -2,25 +2,21 @@ package br.sp.puc.camel.processor;
 
 import br.sp.puc.camel.model.SolicitarPagamentoRequest;
 import org.apache.camel.Exchange;
-import org.apache.camel.Processor;
-import org.apache.camel.builder.ProcessorBuilder;
 
 import javax.xml.soap.*;
 
 /**
  * Created by gabriel on 04/12/14.
  */
-public class VisaInputProcessor implements Processor {
+public class VisaProcessor extends PagamentoProcessor {
 
     @Override
     public void process(Exchange exchange) throws Exception {
-
-        SOAPMessage soapRequest = createSoapRequest(exchange);
-        exchange.getOut().setBody(soapRequest);
-
+        System.out.println("Visa");
+        super.process(exchange);
     }
 
-    private SOAPMessage createSoapRequest(Exchange exchange) throws Exception {
+    protected SOAPMessage createSoapRequest(Exchange exchange) throws Exception {
         SolicitarPagamentoRequest in = exchange.getIn().getBody(SolicitarPagamentoRequest.class);
 
         MessageFactory messageFactory = MessageFactory.newInstance();
@@ -43,6 +39,11 @@ public class VisaInputProcessor implements Processor {
         soapMessage.saveChanges();
 
         return soapMessage;
+    }
+
+    @Override
+    protected String getWebserviceURI() {
+        return "http://env-7034838.jelasticlw.com.br/GatewayPagamentoVisa/services/SolicitarPagamento";
     }
 
 }

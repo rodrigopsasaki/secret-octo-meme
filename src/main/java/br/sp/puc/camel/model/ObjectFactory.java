@@ -39,7 +39,7 @@ public class ObjectFactory {
 
     /**
      * Create an instance of {@link SolicitarPagamentoRequest }
-     * 
+     *
      */
     public SolicitarPagamentoRequest createSolicitarPagamentoRequest() {
         return new SolicitarPagamentoRequest();

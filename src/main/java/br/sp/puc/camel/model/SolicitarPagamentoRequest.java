@@ -39,25 +39,25 @@ import javax.xml.bind.annotation.*;
     "bandeiraCartao"
 })
 @XmlRootElement(name = "solicitarPagamentoRequest")
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
 public class SolicitarPagamentoRequest {
 
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     protected String numeroPedido;
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     protected String nomeCliente;
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     protected String cpfCliente;
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     protected double valorCompra;
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     protected String numeroCartao;
     @XmlElement(required = true)
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     protected String bandeiraCartao;
 
     /**
@@ -68,7 +68,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public String getNumeroPedido() {
         return numeroPedido;
     }
@@ -81,7 +81,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public void setNumeroPedido(String value) {
         this.numeroPedido = value;
     }
@@ -94,7 +94,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public String getNomeCliente() {
         return nomeCliente;
     }
@@ -107,7 +107,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public void setNomeCliente(String value) {
         this.nomeCliente = value;
     }
@@ -120,7 +120,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public String getCpfCliente() {
         return cpfCliente;
     }
@@ -133,7 +133,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public void setCpfCliente(String value) {
         this.cpfCliente = value;
     }
@@ -142,7 +142,7 @@ public class SolicitarPagamentoRequest {
      * Gets the value of the valorCompra property.
      * 
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public double getValorCompra() {
         return valorCompra;
     }
@@ -151,7 +151,7 @@ public class SolicitarPagamentoRequest {
      * Sets the value of the valorCompra property.
      * 
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public void setValorCompra(double value) {
         this.valorCompra = value;
     }
@@ -164,7 +164,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public String getNumeroCartao() {
         return numeroCartao;
     }
@@ -177,7 +177,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public void setNumeroCartao(String value) {
         this.numeroCartao = value;
     }
@@ -190,7 +190,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public String getBandeiraCartao() {
         return bandeiraCartao;
     }
@@ -203,7 +203,7 @@ public class SolicitarPagamentoRequest {
      *     {@link String }
      *     
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T04:24:28-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public void setBandeiraCartao(String value) {
         this.bandeiraCartao = value;
     }

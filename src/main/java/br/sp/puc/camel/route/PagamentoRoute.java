@@ -1,8 +1,10 @@
 package br.sp.puc.camel.route;
 
+import br.sp.puc.camel.predicate.MasterCardPredicate;
 import br.sp.puc.camel.predicate.VisaPredicate;
-import br.sp.puc.camel.processor.VisaInputProcessor;
-import br.sp.puc.camel.processor.VisaOutputProcessor;
+import br.sp.puc.camel.processor.MasterCardProcessor;
+import br.sp.puc.camel.processor.OtherwiseProcessor;
+import br.sp.puc.camel.processor.VisaProcessor;
 import org.apache.camel.builder.RouteBuilder;
 
 /**
@@ -26,9 +28,12 @@ public class PagamentoRoute extends RouteBuilder {
 
         from("cxf:bean:solicitarPagamento").choice()
                 .when(new VisaPredicate())
-                    .process(new VisaInputProcessor())
-                    .to("cxf:bean:pagamentoVisa")
-                    .process(new VisaOutputProcessor())
-                .otherwise().endChoice();
+                    .process(new VisaProcessor())
+                .when(new MasterCardPredicate())
+                    .process(new MasterCardProcessor())
+                .otherwise()
+                    .process(new OtherwiseProcessor())
+                .endChoice()
+        .to("log:output");
     }
 }

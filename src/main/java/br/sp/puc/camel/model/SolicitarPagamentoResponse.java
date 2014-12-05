@@ -32,17 +32,17 @@ import javax.xml.bind.annotation.XmlType;
     "aprovado"
 })
 @XmlRootElement(name = "solicitarPagamentoResponse")
-@Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T03:36:03-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
 public class SolicitarPagamentoResponse {
 
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T03:36:03-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     protected boolean aprovado;
 
     /**
      * Gets the value of the aprovado property.
      * 
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T03:36:03-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public boolean isAprovado() {
         return aprovado;
     }
@@ -51,7 +51,7 @@ public class SolicitarPagamentoResponse {
      * Sets the value of the aprovado property.
      * 
      */
-    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-04T03:36:03-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2014-12-05T01:35:40-02:00", comments = "JAXB RI v2.2.10-b140310.1920")
     public void setAprovado(boolean value) {
         this.aprovado = value;
     }

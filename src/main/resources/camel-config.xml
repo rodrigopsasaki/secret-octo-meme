@@ -16,14 +16,6 @@
                           serviceClass="br.sp.puc.camel.model.SolicitarPagamento"
                           xmlns:s="http://br.sp.puc/services/pagamento"/>
 
-    <cxf:cxfEndpoint id="pagamentoVisa"
-                     address="/pagamentoVisa"
-                     endpointName="ax:SolicitarPagamentoHttpSoap11Endpoint"
-                     serviceName="ax:SolicitarPagamento"
-                     wsdlURL="META-INF/wsdl/SolicitarPagamentoVisa.wsdl"
-                     serviceClass="br.sp.puc.camel.model.visa.SolicitarPagamentoPortType"
-                     xmlns:ax="http://ws.apache.org/axis2"/>
-
     <beans:bean id="pagamentoRoute" class="br.sp.puc.camel.route.PagamentoRoute"/>
 
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
