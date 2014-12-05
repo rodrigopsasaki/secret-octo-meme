@@ -1,6 +1,6 @@
 package br.sp.puc.camel.predicate;
 
-import br.sp.puc.camel.SolicitarPagamentoRequest;
+import br.sp.puc.camel.model.SolicitarPagamentoRequest;
 import org.apache.camel.Exchange;
 import org.apache.camel.Predicate;
 

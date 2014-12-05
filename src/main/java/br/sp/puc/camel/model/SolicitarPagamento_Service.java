@@ -1,6 +1,4 @@
-package br.sp.puc.camel;
-
-import br.sp.puc.camel.SolicitarPagamento;
+package br.sp.puc.camel.model;
 
 import javax.annotation.Generated;
 import javax.xml.namespace.QName;
@@ -88,8 +86,8 @@ public class SolicitarPagamento_Service extends Service {
      */
     @WebEndpoint(name = "SolicitarPagamentoSOAP")
     @Generated(value = "org.apache.cxf.tools.wsdlto.WSDLToJava", date = "2014-12-04T15:36:04.025-02:00")
-    public br.sp.puc.camel.SolicitarPagamento getSolicitarPagamentoSOAP() {
-        return super.getPort(SolicitarPagamentoSOAP, br.sp.puc.camel.SolicitarPagamento.class);
+    public SolicitarPagamento getSolicitarPagamentoSOAP() {
+        return super.getPort(SolicitarPagamentoSOAP, SolicitarPagamento.class);
     }
 
     /**
@@ -101,7 +99,7 @@ public class SolicitarPagamento_Service extends Service {
      */
     @WebEndpoint(name = "SolicitarPagamentoSOAP")
     @Generated(value = "org.apache.cxf.tools.wsdlto.WSDLToJava", date = "2014-12-04T15:36:04.025-02:00")
-    public br.sp.puc.camel.SolicitarPagamento getSolicitarPagamentoSOAP(WebServiceFeature... features) {
+    public SolicitarPagamento getSolicitarPagamentoSOAP(WebServiceFeature... features) {
         return super.getPort(SolicitarPagamentoSOAP, SolicitarPagamento.class, features);
     }
 

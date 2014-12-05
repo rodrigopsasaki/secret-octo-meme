@@ -1,5 +1,5 @@
 
-package br.sp.puc.camel;
+package br.sp.puc.camel.model;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

@@ -1,13 +1,7 @@
 package br.sp.puc.camel.route;
 
-import br.sp.puc.camel.SolicitarPagamentoRequest;
-import br.sp.puc.camel.SolicitarPagamentoResponse;
-import br.sp.puc.camel.predicate.MasterCardPredicate;
 import br.sp.puc.camel.predicate.VisaPredicate;
-import br.sp.puc.camel.processor.MasterCardProcessor;
 import br.sp.puc.camel.processor.VisaProcessor;
-import org.apache.camel.Exchange;
-import org.apache.camel.Processor;
 import org.apache.camel.builder.RouteBuilder;
 
 /**
@@ -31,8 +25,8 @@ public class PagamentoRoute extends RouteBuilder {
 
         from("cxf:bean:solicitarPagamento").choice()
                 .when(new VisaPredicate())
-                    .to("direct:http://env-7034838.jelasticlw.com.br/GatewayPagamentoVisa/services/SolicitarPagamento")
                     .process(new VisaProcessor())
+                    .to("cxf:bean:pagamentoVisa")
                 .otherwise().endChoice();
     }
 }

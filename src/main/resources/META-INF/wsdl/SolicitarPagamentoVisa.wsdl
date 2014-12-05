@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://ws.apache.org/axis2" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax21="http://model.gpvisa.com.br/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://ws.apache.org/axis2">
+    <wsdl:documentation>
+		Please Type your service description here
+	</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema xmlns:ax22="http://model.gpvisa.com.br/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.apache.org/axis2">
+            <xs:import namespace="http://model.gpvisa.com.br/xsd"/>
+            <xs:element name="solicitarPagamento">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="pedido" type="xs:int"/>
+                        <xs:element minOccurs="0" name="cliente" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="valor" type="xs:double"/>
+                        <xs:element minOccurs="0" name="numeroCartao" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="solicitarPagamentoResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:MensagemTO"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://model.gpvisa.com.br/xsd">
+            <xs:complexType name="MensagemTO">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="codigo" type="xs:int"/>
+                    <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="solicitarPagamentoRequest">
+        <wsdl:part name="parameters" element="ns:solicitarPagamento"/>
+    </wsdl:message>
+    <wsdl:message name="solicitarPagamentoResponse">
+        <wsdl:part name="parameters" element="ns:solicitarPagamentoResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="SolicitarPagamentoPortType">
+        <wsdl:operation name="solicitarPagamento">
+            <wsdl:input message="ns:solicitarPagamentoRequest" wsaw:Action="urn:solicitarPagamento"/>
+            <wsdl:output message="ns:solicitarPagamentoResponse" wsaw:Action="urn:solicitarPagamentoResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SolicitarPagamentoSoap11Binding" type="ns:SolicitarPagamentoPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="solicitarPagamento">
+            <soap:operation soapAction="urn:solicitarPagamento" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SolicitarPagamentoSoap12Binding" type="ns:SolicitarPagamentoPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="solicitarPagamento">
+            <soap12:operation soapAction="urn:solicitarPagamento" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="SolicitarPagamentoHttpBinding" type="ns:SolicitarPagamentoPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="solicitarPagamento">
+            <http:operation location="solicitarPagamento"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="SolicitarPagamento">
+        <wsdl:port name="SolicitarPagamentoHttpSoap11Endpoint" binding="ns:SolicitarPagamentoSoap11Binding">
+            <soap:address location="http://env-7034838.jelasticlw.com.br/GatewayPagamentoVisa/services/SolicitarPagamento.SolicitarPagamentoHttpSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="SolicitarPagamentoHttpSoap12Endpoint" binding="ns:SolicitarPagamentoSoap12Binding">
+            <soap12:address location="http://env-7034838.jelasticlw.com.br/GatewayPagamentoVisa/services/SolicitarPagamento.SolicitarPagamentoHttpSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="SolicitarPagamentoHttpEndpoint" binding="ns:SolicitarPagamentoHttpBinding">
+            <http:address location="http://env-7034838.jelasticlw.com.br/GatewayPagamentoVisa/services/SolicitarPagamento.SolicitarPagamentoHttpEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
