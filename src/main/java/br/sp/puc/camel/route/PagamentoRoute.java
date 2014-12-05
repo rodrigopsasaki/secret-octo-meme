@@ -1,7 +1,8 @@
 package br.sp.puc.camel.route;
 
 import br.sp.puc.camel.predicate.VisaPredicate;
-import br.sp.puc.camel.processor.VisaProcessor;
+import br.sp.puc.camel.processor.VisaInputProcessor;
+import br.sp.puc.camel.processor.VisaOutputProcessor;
 import org.apache.camel.builder.RouteBuilder;
 
 /**
@@ -25,8 +26,9 @@ public class PagamentoRoute extends RouteBuilder {
 
         from("cxf:bean:solicitarPagamento").choice()
                 .when(new VisaPredicate())
-                    .process(new VisaProcessor())
+                    .process(new VisaInputProcessor())
                     .to("cxf:bean:pagamentoVisa")
+                    .process(new VisaOutputProcessor())
                 .otherwise().endChoice();
     }
 }
