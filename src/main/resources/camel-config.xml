@@ -21,15 +21,4 @@
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <routeBuilder ref="pagamentoRoute"/>
     </camelContext>
-
-  <!--
-  We still need it for loading the CXFServlet
-  <import resource="classpath:META-INF/cxf/cxf.xml"/>
-
-  <bean id="myRoutes" class="org.apache.camel.example.cxf.CamelRoute"/>
-
-  <camelContext xmlns="http://camel.apache.org/schema/spring">
-    <routeBuilder ref="myRoutes"/>
-  </camelContext>
-    -->
 </beans:beans>
